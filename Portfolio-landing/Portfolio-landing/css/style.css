@@ -1,0 +1,341 @@
+/*Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   font-family: Gilroy;
+   font-weight: 500;
+   color: #070707;
+}
+
+/*-------------------------------------------------------------------------*/
+
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Medium.eot');
+   src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Gilroy-Medium.woff') format('woff'),
+      url('../fonts/Gilroy-Medium.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Gilroy';
+   src: url('../fonts/Gilroy-Bold.eot');
+   src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Gilroy-Bold.woff') format('woff'),
+      url('../fonts/Gilroy-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+}
+
+/*-------------------------------------------------------------------------*/
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+[class*="__container"] {
+   max-width: 946px;
+   margin: 0 auto;
+}
+
+/*-------------------------------------------------------------------------*/
+.header {}
+.header__container {
+   display: flex;
+   align-items: center;
+   min-height: 89px;
+   /* padding: 0px 10px; */
+}
+.header__menu {}
+
+.menu {}
+.menu__list {
+   display: flex;
+   justify-content: space-between;
+}
+.menu__link {
+   white-space: nowrap;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 122%;
+   color: #828282;
+   margin-right: 155px;
+}
+.active-link {
+   color: #070707;
+}
+
+/*-------------------------------------------------------------------------*/
+.page {
+   /* А если нет футера? */
+   /* flex: 1 1 auto; */
+}
+.page__main {}
+
+.main-block {
+   margin-bottom: 104px;
+}
+.main-block__container {}
+
+.main-block__content {}
+
+/*Кому применять flex? Блоку (выше) или элементу (ниже)?*/
+.content-main-block {   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 30px;
+}
+
+.content-main-block__title {
+   font-weight: 700;
+   font-size: 47.3392px;
+   line-height: 59px;
+}
+.content-main-block__subtitle {
+   font-size: 18px;
+   line-height: 122%;
+}
+.content-main-block__lang {
+   transform: rotate(-90deg);
+   margin-right: -12px;
+}
+/* Жирность как сделать? JS? */
+.span-lang{
+   font-weight: 700;
+}
+.main-block__image {
+   /* width: 100%; */
+}
+
+/*-------------------------------------------------------------------------*/
+.page_about {}
+.about-block {
+   background-color: #F6F6F6;
+}
+
+.about-block__container {
+   padding: 120px 0px 107px 0px;
+}
+
+.about-block__title {
+   margin-bottom: 17px;
+}
+.title{
+   text-align: center;
+   font-size: 34px;
+   line-height: 123%;
+   font-weight: 700;
+}
+.about-block__text {
+   text-align: center;
+   font-size: 18px;
+   line-height: 122%;
+}
+.about-block__text p {
+   margin-bottom: 47px;
+}
+
+/*-------------------------------------------------------------------------*/
+.page-skills {}
+
+.skills-block {}
+
+.skills-block__container {
+   padding: 91px 0px 110px 0px;
+}
+
+.skills-block__title {
+   margin-bottom: 69px;
+}
+.skills-block__subtitle {
+   text-align: center;
+   margin-bottom: 83px;
+}
+
+.skills-block__items {
+   display: flex;
+   justify-content: space-between;
+}
+
+.skills-block__item {
+   text-align: center;
+}
+
+.item-skills {}
+
+.item-skills__icon {
+   margin-bottom: 24px;
+}
+
+.item-skills__label {
+   margin-bottom: 40px;
+}
+
+.item-skills__rating {
+   width: 166px;
+   display: flex;
+   /* Как обратиться к последнему эл-ту? */
+   align-self: flex-end;
+   justify-content: space-between;
+}
+
+/*-------------------------------------------------------------------------*/
+.page-portfolio {}
+.portfolio-block {
+   background-color: #F6F6F6;
+}
+.portfolio-block__container {
+   padding: 112px 0px 96px 0px;
+}
+
+.portfolio-block__title {
+   margin-bottom: 47px;
+}
+.portfolio-block__image {
+   margin-bottom: 45px;
+}
+.portfolio-block__caption {
+   font-size: 18px;
+   line-height: 122%;
+   text-align: center;
+   text-decoration-line: underline;
+   margin-bottom: 99px;
+}
+
+/*-------------------------------------------------------------------------*/
+.page__contacts {}
+.contacts-block {}
+.contacts-block__container {
+   padding: 114px 0px 123px 0px;
+   text-align: center;
+}
+
+.contacts-block__title {
+   margin-bottom: 20px;
+}
+.contacts-block__text {
+   font-size: 18px;
+   line-height: 122%;
+   margin-bottom: 29px;
+}
+.contacts-block__link {
+   /* Че не так с цветом ссылки? */
+   background: #070707;
+   border-radius: 30px;
+   padding: 13px 30px 6px 28px;
+   color: #FFFFFF;
+   font-size: 18px;
+   line-height: 122%;
+   font-weight: 700;
+}
+.contacts-block__icons {
+   display: flex;
+   justify-content: center;
+   /* Надо выучить все про GAP */
+   gap: 61px;
+   padding-top: 85px;
+   margin-bottom: 45px;
+}
+.contacts-block__caption {
+   font-size: 14px;
+   line-height: 121%;
+   color: #828282;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

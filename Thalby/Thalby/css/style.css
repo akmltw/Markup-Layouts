@@ -1,0 +1,733 @@
+/*Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   font-size: 14px;
+   font-family: Roboto;
+   font-weight: 400;
+   color: #000000;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.wrapper{
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+[class*"__container"]{
+   max-width: 1094px;
+   margin: 0 auto;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-----------------------------HEADER--------------------------------------*/
+
+/*----------------------Абсолютное позицион.?------------------------------*/
+.header {
+   width: 100%;
+   /* position: absolute;
+   left: 0;
+   top: 0;
+   z-index: 15; */
+}
+
+.header__container {
+   display: flex;
+   align-items: center;
+   min-height: 56px;
+}
+
+.header__menu {
+   flex: 0 0 425px;
+   margin-right: 82px;
+}
+
+.header__logo {
+   height: 24px;
+}
+
+.header__icons {
+   margin-right: 15px;
+}
+
+/*-------------------------------------------------------------------------*/
+.menu {}
+
+.menu__list {
+   display: flex;
+   padding-left: 15px;
+   min-height: 56px;
+   align-items: center;
+}
+
+.menu__item {
+}
+
+.menu__item:not(:last-child){
+   margin-right: 28px;
+}
+
+.menu__link {
+   font-size: 16px;
+   color: #1C1B1B;
+   line-height: 150%;
+   font-weight: 700;
+}
+
+/*-------------------------------------------------------------------------*/
+.icons {
+   flex: 1 1 492px;   
+}
+
+.icons__list {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.icons__item:not(:last-child) {
+   margin-right: 25px;
+}
+
+.icons__link {
+   height: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/*-------------------------------------------------------------------------*/
+/*------------------------FIRST-SECTION------------------------------------*/
+
+.preview {
+   flex: 1 1 auto;
+   width: 100%;
+   min-height: 554px;
+   background-color: #F0EFEB;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.preview__container {
+   display: flex;
+}
+
+.preview__body {
+   min-width: 534px;
+   padding: 81px 0px 0px 15px;
+   margin-right: 59px;
+}
+
+/*------------------------min-width здес к месту?---------------------------*/
+.preview__title {
+   min-width: 481px;
+   font-size: 60px;
+   font-weight: 700;
+   line-height: 116%;
+}
+
+.preview__title:not(:last-child){
+   margin-bottom: 42px;
+}
+
+.preview__text {
+   font-family: Roboto;
+   font-size: 24px;
+   line-height: 116%;
+}
+.preview__text:not(:last-child) {
+   margin-bottom: 26px;
+}
+
+/*---------------------------*/
+/* РЕШИ ПРОБЛЕМУ С ОТСТУПОМ  */
+.preview__button {
+   display: inline-flex;
+   color: #FFF;
+   font-size: 17px;
+   line-height: 117%;
+   background: #000000;
+   border: 1px solid #000000;
+   border-radius: 100px;
+   padding: 7px 23px 9px 23px;
+   min-height: 36px;
+}
+
+.preview__image {
+   padding-top: 9px;
+}
+
+/*-------------------------------------------------------------------------*/
+/*------------------------BESTSELLERS--------------------------------------*/
+.bestsellers {
+   padding: 60px 0px 248px 0px;
+   background-color: #fff;
+}
+
+.bestsellers__container {}
+
+.bestsellers__top {
+   text-align: center;
+}
+
+.title {
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 116%;
+}
+.bestsellers__title:not(:last-child) {
+   margin-bottom: 27px;
+}
+
+/*-----------------------------------------------*/
+/*-------ПРОБЛЕМЫ С FLEXBOX ВЫРАВНИВАНИЕМ--------*/
+.bestsellers__textbody {
+   max-width: 650px;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center;
+   align-items: center; */
+   margin: 0 auto;
+}
+
+/* .bestsellers__textbody:not(:last-child) {
+} */
+
+/*-----------------------------------------------*/
+/* Разве отступ не дается элементу, а не блоку?  */
+.textbody {
+   padding: 0.31px 9px 0.69px 9px;
+   margin-bottom: 87px;
+}
+
+.textbody__top {
+   min-width: 632px;
+   font-size: 20px;
+   line-height: 115%;
+}
+
+.textbody__top:not(:last-child) {
+   margin-bottom: 47px;
+}
+
+.textbody__bottom {
+   font-size: 20px;
+   line-height: 115%;
+}
+
+.bestsellers__cards {}
+
+.cards {}
+
+.cards__title {
+   margin-bottom: 52px;
+   text-align: center;
+}
+
+.cards__items {
+   /* display: flex; */
+   /* flex-direction: column; */
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------Почему именно здесь срабатывает flex-direction, а не выше?--------*/
+.cards__column {
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content: space-around;
+}
+
+.cards__item {}
+
+.item {}
+
+.item__image {}
+
+.item__textbody {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.item__caption {
+   max-width: 156px;
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 117%;
+}
+
+.item__caption:not(:last-child) {
+   margin-bottom: 17px;
+}
+
+.item__price {
+   font-size: 17px;
+   line-height: 117%;
+}
+.item__price:not(:last-child) {
+   margin-bottom: 11px;
+}
+
+.item__link {
+   font-size: 17px;
+   line-height: 117%;
+}
+
+.link-style {
+   font-weight: 700;
+   color: #000000;
+   text-decoration: underline;
+}
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------GUIDES----------------------------------------*/
+
+.guides {
+   background-color: #f0f0f0;
+}
+.guides:not(:last-child) {
+   margin-bottom: 241px;
+}
+
+/* .guides_dark_grey{
+   background-color: #e0e0e0;
+} */
+
+.guides__container {}
+
+.guides__items {
+}
+
+.guides__item {
+   display: flex;
+   flex-direction: row;
+}
+
+.guides__item:not(:last-child) {
+   padding: 76px 15px 51px;
+}
+
+.guides__textbody {
+   display: flex;
+   flex-direction: column; 
+   max-width: 532px;
+}
+
+.guides__image {
+   margin-right: 50px;
+}
+
+.guides__title:not(:last-child) {
+   margin-bottom: 31px;
+}
+
+.title {}
+
+.guides__text {
+   font-size: 36px;
+   line-height: 116%;
+}
+
+.guides__text:not(:last-child) {
+   margin-bottom: 40px;
+}
+
+.guides__link {
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 117%;
+   text-decoration: underline;
+}
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------FEATURES----------------------------------------*/
+
+.features {}
+
+.features__container {
+   /* display: flex;
+   flex-direction: column; */
+}
+
+.features__title {
+   text-align: center;
+   font-weight: 400;
+}
+
+.features__title:not(:last-child) {
+   margin-bottom: 69px;
+}
+
+.features__points {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0px -24px;
+   justify-content: center;
+   align-items: center;
+}
+
+.features:not(:last-child) {
+   margin-bottom: 163px;
+}
+
+.features__point {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 0px 24px;
+   min-width: 338.66px;
+}
+
+.features__point:before {
+   display: inline-block;
+   content: '';
+   height: 70px;
+   width: 70px;
+   border-radius: 35px;
+}
+
+.turquoise-point:before{
+   background-color: #21F7EC;
+}
+
+.blue-point:before {
+   background-color: #33D3BC;
+}
+
+.navy-point:before {
+   background-color: #18A5C6;
+}
+
+.beige-point::before {
+   background-color: #D38F62;
+}
+
+.red-point::before {
+   background-color: #F94C43;
+}
+
+.fiol-point::before {
+   background-color: #D399FF;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*-------------------margin должен быть НЕ ЗДЕСЬ---------------------------*/
+.features__text {
+   display: inline-block;
+   font-size: 30px;
+   font-weight: 700;
+   line-height: 116%;
+   margin-bottom: 111px;
+}
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------INTERVIEWS------------------------------------*/
+
+.interviews:not(:last-child) {
+   margin-bottom: 131px;
+}
+
+.interviews__container {}
+
+.interviews__title {
+   text-align: center;
+}
+
+.interviews__title:not(:last-child) {
+   margin-bottom: 102px;
+}
+
+.interviews__cards {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   padding: 0px 15px;
+}
+
+.interviews__card:not(:last-child) {
+   margin-right: 100px;
+}
+
+.interviews__image {}
+
+.interviews__image:not(:last-child) {
+   margin-bottom: 35px;
+}
+
+.interviews__citation {
+   font-weight: 700;
+   font-size: 22px;
+   line-height: 118%;
+   letter-spacing: 0.6px;
+}
+
+.interviews__citation:not(:last-child) {
+   margin-bottom: 40px;
+}
+
+.interviews__name {
+   font-size: 19px;
+   line-height: 115%;
+
+}
+
+.interviews__name:not(:last-child) {
+   margin-bottom: 44px;
+}
+
+.interviews__link {
+   font-size: 18px;
+   line-height: 116%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------FEEDBACK----------------------------------------*/
+
+.feedback:not(:last-child) {
+   margin-bottom: 88px;
+}
+
+.feedback__container {}
+
+.feedback_body {
+}
+
+.feedback_formbody {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.feedback__title {
+   text-align: center;
+}
+
+.feedback__title:not(:last-child) {
+   margin-bottom: 4px;
+}
+
+.feedback__subtitle {
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 117%;
+   text-align: center;
+}
+
+.feedback__subtitle:not(:last-child) {
+   margin-bottom: 26px;
+}
+
+.feedback__input {
+   width: 153px;
+   height: 39px;
+   border: 1px solid #000000;
+   color: #A0A0A0;
+   font-size: 14px;
+   line-height: 114%;
+   padding: 12px 8px 11px 8px;
+}
+.feedback__input:not(:last-child) {
+   margin-right: 60px;
+}
+
+.input-email {
+   width: 366px;
+}
+
+.input-email:not(:last-child) {
+  
+}
+
+.feedback__button{
+   width: 115px;
+   height: 33px;
+   border-radius: 100px;
+   border: 1px solid #000000;
+   background-color: #000000;
+   font-size: 14px;
+   line-height: 114%;
+   color: #FFFFFF;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------FOOTER----------------------------------------*/
+
+.footer {
+   background-color: #020202;
+   color: #FFF;
+   height: 291px;
+   padding: 51px 0px 16px 0px;
+
+}
+
+.footer__container {
+   display: flex;
+}
+
+.footer__thumbnails {
+   margin-right: 586px;
+}
+
+.footer__logo:not(:last-child) {
+   margin-bottom: 37.63px;
+}
+
+.footer__icons {
+   display: inline-flex;
+   flex-direction: row;
+}
+
+.footer__icon {
+   width: 26px;
+   height: 26px;
+}
+
+.footer__icon:not(:last-child) {
+   margin-right: 20px;
+}
+
+.footer__columns {
+   display: flex;
+   flex-direction: row;
+}
+
+.footer__column:not(:last-child) {
+   margin-right: 72px;
+}
+
+.footer__column {
+}
+
+
+.footer__menu {}
+
+.menu-footer {
+}
+
+.menu-footer__list {
+}
+
+.menu-footer__item {
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.footer__label {
+   line-height: 164%;
+}
+
+.footer__label:not(:last-child) {
+   margin-bottom: 36px;
+}
+
+.menu-footer__link {
+   color: #FFFFFF;
+   line-height: 150%;
+}
+
+.menu-footer__link:not(:last-child) {
+   margin-bottom: 12px;
+}
+
+.footer__bottom {
+}
+
+.footer__text {
+   text-align: center;
+   line-height: 164%;
+}
