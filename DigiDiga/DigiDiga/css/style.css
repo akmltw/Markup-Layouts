@@ -1,0 +1,374 @@
+/*Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+   /* color: inherit; */
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   /* Как быть с link шрифта ниже? */
+   font-family: Circular Air;
+   font-weight: 700;
+   /* font-weight: 700; */
+   /* Если много цветов в макете, какой лучше брать по умолчанию? */
+   color: #848484;
+   /* Что делать, если у объекта шрифт н-р 18.8193px */
+   font-size: 22px;
+}
+
+/*-------------------------------------------------------------------------*/
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   min-height: 100%;
+}
+
+[class*="__container"] {
+   max-width: 1085px;
+   margin: 0 auto;
+}
+
+.page {
+   flex: 1 1 auto;
+}
+
+.label {
+   font-size: 36px;
+   line-height: 101%;
+}
+
+.title {
+   font-size: 84.4788px;
+   line-height: 101%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*------------------------------HEADER-------------------------------------*/
+
+.header {
+   min-height: 73px;
+}
+
+.header__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20.46px 0px 21.04px 0px;
+}
+
+.header__logo {}
+
+.header__menu {
+}
+
+.menu {
+   margin-right: 119.24px;
+}
+
+.menu__list {
+   display: flex;
+}
+
+.menu__link a {
+   color: inherit;
+   font-weight: 300;
+   font-size: 20px;
+   line-height: 101%;
+}
+
+.menu__link:not(:last-child) {
+/* Что делать, если между объектами разный отступ? */
+   margin-right: 53.88px;
+}
+.active-link a {
+   color: #731F07;
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 101%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------MAIN--------------------------------------*/
+.page__main-block {}
+.main-block {}
+
+.main-block__container {
+   display: flex;
+   justify-content: space-between;
+   padding: 33px 65.5px 0px 0px;
+}
+.main-block__body {}
+
+.textbody {
+   padding-top: 122.94px;
+}
+.textbody__title {
+   font-weight: 700;
+   font-size: 48px;
+   line-height: 101%;
+   color: #506269;
+}
+.textbody__title:not(:last-child) {
+   margin-bottom: 25.67px;
+}
+.textbody__subtitle {
+   font-weight: 300;
+   font-size: 22px;
+   line-height: 101%;
+   color: #848484;
+}
+.textbody__subtitle:not(:last-child) {
+   /* Как выставлять отступ до такой кнопки? */
+   margin-bottom: 66.61px;
+}
+.textbody__link {
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 101%;
+   text-align: center;
+   color: white;
+   background-color: #A5410F;
+   padding: 25.34px 138.6px 25.34px 138.6px;
+}
+
+/* когда такое ниже лучше делать? */
+.main-block__image img {
+   width: 100%;
+}
+
+/*-------------------------------------------------------------------------*/
+                /* ИЛИ ЭТОТ БЛОК ОТДЕЛЬНО ВЫНОСИТЬ НЕ НАДО?? */
+/*-------------------------------------------------------------------------*/
+.page__about-block {
+   padding-top: 68.16px;
+}
+/* отступ выше нужно делать от какого блока (ниже или выше)? */
+.about-block {
+   padding-bottom: 247px;
+}
+.about-block__container {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   z-index: 15;
+}
+.about-block__steps {
+   width: 1084.11px;
+   height: 296.15px;
+   position: absolute;
+   top: 350.94px;
+   left: 0;
+   background-color: #D5963D;
+}
+
+.about-block__body {}
+.label-body {}
+.label-body__label {
+   color: #506269;
+   margin-bottom: 17.53px;
+}
+.label-body__logo {}
+
+.about-block__text {
+   font-size: 24px;
+   line-height: 167%;
+   font-weight: 300;
+}
+.about-block__text p:not(:last-child) {
+   margin-bottom: 32px;
+}
+.about-block__text span {
+   font-weight: 700;
+}
+
+.about-block__steps {
+}
+.steps {}
+.steps__list {
+}
+.steps__items {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 79.01px 114.34px 93.56px 102.58px;
+}
+.items-steps {}
+.items-steps__item {
+   display: flex;
+   flex-direction: column;
+   color: #FFFFFF;
+}
+.items-steps__number {
+   font-family: 'Playfair Display SC';
+   font-weight: 400;
+}
+.items-steps__number:not(:last-child) {
+   margin-bottom: 28px;
+}
+.items-steps__caption {
+   font-size: 22px;
+   line-height: 101%;
+}
+
+/*-------------------------------------------------------------------------*/
+.page__recent-block {
+   padding-top: 193.73px;
+   padding-bottom: 97.77px;
+}
+
+.recent-block {
+   background-color: rgba(165, 65, 15, 0.18);
+}
+
+.recent-block__body {}
+
+.body-recent {}
+
+.body-recent__label {
+   color: #A5410F;
+}
+
+.body-recent__title {
+   color: #A5410F;
+   margin-bottom: 93.78px;
+}
+
+.recent-block__slider {}
+
+.slider-recent-block {}
+
+.slider-recent-block__wrapper {}
+
+.swiper-wrapper {}
+
+.slider-recent-block__slide {}
+
+.swiper-slide {}
+
+.recent-block__arrows.swiper-button-prev,
+.recent-block__arrows.swiper-button-next {
+   position: static;
+   background: #D5963D url('../img/recent-block/arrow.svg') 0 0 / 100% no-repeat;
+}
+.recent-block__arrows.swiper-button-next {
+   transform: rotate(-180deg);
+}
+
+.recent-block__arrows {
+   position: absolute;
+   bottom: -52px;
+   right: 0;
+   display: flex;
+   gap: 40px;
+   align-items: center;
+}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+
+/*-------------------------------------------------------------------------*/
+.page__clients {}
+
+.clients-block {}
+
+.clients-block__container {}
+
+.clients-block__label {
+   color: #506269;
+}
+
+.clients-block__title {
+   color: #D5963D;
+   margin-bottom: 78.64px;
+}
+
+.clients-block__list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+.clients-block__list li {
+   margin-right: 57px;
+}
+.client-block__logo {}
