@@ -12,7 +12,7 @@
       rel="stylesheet" type="text/css" />
    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:regular&display=swap" rel="stylesheet" />
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
    <title>DigiDiga</title>
 </head>
 
@@ -23,9 +23,9 @@
             <div class="header__logo"><a href="#"><img src="img/header/logo.svg" alt="Logo"></a></div>
             <div class="header__menu menu">
                <ul class="menu__list">
-                  <li class="menu__link active-link"><a href="#">About us</a></li>
-                  <li class="menu__link"><a href="#">Our Project</a></li>
-                  <li class="menu__link"><a href="#">Clients</a></li>
+                  <li class="menu__item"><a class="menu__link active-link" href="#">About us</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Our Project</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Clients</a></li>
                </ul>
             </div>
          </div>
@@ -86,24 +86,27 @@
          <section class="page__recent-block recent-block">
             <div class="recent-block__container">
                <div class="recent-block__body body-recent">
-                  <div class="body-recent__label label">recent</div>
+                  <div class="body-recent__label label label-brown">recent</div>
                   <div class="body-recent__title title">project</div>
                </div>
-               <!-- <div class="recent-block__slider slider-recent-block swiper">
-                  <div class="slider-recent-block__wrapper swiper-wrapper">
-                     <div class="slider-recent-block__slide swiper-slide"><img src="img/recent-block/Slide-1.jpg"
-                           alt="Slide-1"></div>
-                     <div class="slider-recent-block__slide swiper-slide"><img src="img/recent-block/Slide-2.jpg"
-                           alt="Slide-2"></div>
-                     <div class="slider-recent-block__slide swiper-slide"><img src="img/recent-block/Slide-3.jpg"
-                           alt="Slide-3"></div>
+               <div class="slider-recent">
+                  <div class="slider-recent__slide">
+                     <div class="slider-recent__image"><img src="img/recent-block/Slide-1.jpg" alt="Slide 1"></div>
+                     <div class="slider-recent__title">Sistem Evaluasi dan Laporan</div>
+                     <div class="slider-recent__caption">Universitas Sultan Ageng Tirtayasa</div>
+                  </div>
+                  <div class="slider-recent__slide">
+                     <div class="slider-recent__image"><img src="img/recent-block/Slide-2.jpg" alt="Slide 2"></div>
+                     <div class="slider-recent__title">Sistem Evaluasi dan Laporan</div>
+                     <div class="slider-recent__caption">Universitas Sultan Ageng Tirtayasa</div>
+                  </div>
+                  <div class="slider-recent__slide">
+                     <div class="slider-recent__image"><img src="img/recent-block/Slide-3.jpg" alt="Slide 3"></div>
+                     <div class="slider-recent__title">Sistem Evaluasi dan Laporan</div>
+                     <div class="slider-recent__caption">Universitas Sultan Ageng Tirtayasa</div>
                   </div>
                </div>
-               <div class="recent-block__arrows">
-                  <div class="recent-block__arrow swiper-button-prev"></div>
-                  <div class="recent-block__arrow swiper-button-next"></div>
-               </div>
-            </div> -->
+            </div>
          </section>
          <section class="page__clients clients-block">
             <div class="clients-block__container">
@@ -128,7 +131,8 @@
          </div>
       </footer>
    </div>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 

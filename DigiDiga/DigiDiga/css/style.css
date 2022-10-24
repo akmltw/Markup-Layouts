@@ -83,8 +83,7 @@ body {
    height: 100%;
    line-height: 1;
    /* Как быть с link шрифта ниже? */
-   font-family: Circular Air;
-   font-weight: 700;
+   font-family: 'Circular Air Bold';
    /* font-weight: 700; */
    /* Если много цветов в макете, какой лучше брать по умолчанию? */
    color: #848484;
@@ -112,6 +111,21 @@ body {
 .label {
    font-size: 36px;
    line-height: 101%;
+   position: relative;
+}
+.label::before {
+   position: absolute;
+   content: '';
+   background-color: #000000;
+   border: 1px solid #000000;
+   left: 0;
+   top: -15.63px;
+   width: 301.1px;
+   height: 0px;
+}
+.label-brown::before {
+   background-color: #A5410F;
+   border: 1px solid #A5410F;
 }
 
 .title {
@@ -146,21 +160,21 @@ body {
    display: flex;
 }
 
-.menu__link a {
+.menu__link {
    color: inherit;
-   font-weight: 300;
+   font-family: 'Circular Air Light';
    font-size: 20px;
    line-height: 101%;
 }
 
-.menu__link:not(:last-child) {
+.menu__item:not(:last-child) {
 /* Что делать, если между объектами разный отступ? */
    margin-right: 53.88px;
 }
-.active-link a {
+.active-link {
    color: #731F07;
    font-size: 20px;
-   font-weight: 700;
+   font-family: 'Circular Air Bold';
    line-height: 101%;
 }
 
@@ -189,7 +203,7 @@ body {
    margin-bottom: 25.67px;
 }
 .textbody__subtitle {
-   font-weight: 300;
+   font-family: 'Circular Air Light';
    font-size: 22px;
    line-height: 101%;
    color: #848484;
@@ -202,6 +216,8 @@ body {
    font-weight: 700;
    font-size: 16px;
    line-height: 101%;
+   width: 369.63px;
+   height: 64.18px;
    text-align: center;
    color: white;
    background-color: #A5410F;
@@ -210,36 +226,48 @@ body {
 
 /* когда такое ниже лучше делать? */
 .main-block__image img {
+   padding-top: 59.72px;
    width: 100%;
+   position: relative;
+}
+.main-block__image::before {
+   position: absolute;
+   width: 237.84px;
+   height: 237.84px;
+   top: 106px;
+   left: 770px;
+   z-index: 10;
+   content: '';
+   background: url(../img/main-block/circle.png) 0 0 no-repeat;
 }
 
 /*-------------------------------------------------------------------------*/
                 /* ИЛИ ЭТОТ БЛОК ОТДЕЛЬНО ВЫНОСИТЬ НЕ НАДО?? */
 /*-------------------------------------------------------------------------*/
 .page__about-block {
-   padding-top: 68.16px;
+   padding-top: 68.85px;
 }
 /* отступ выше нужно делать от какого блока (ниже или выше)? */
 .about-block {
    padding-bottom: 247px;
+   position: relative;
 }
 .about-block__container {
    display: flex;
    justify-content: space-between;
-   position: relative;
-   z-index: 15;
 }
 .about-block__steps {
    width: 1084.11px;
    height: 296.15px;
    position: absolute;
-   top: 350.94px;
-   left: 0;
+   bottom: -163.82px;
+   left: 265px;
    background-color: #D5963D;
 }
 
 .about-block__body {}
 .label-body {}
+
 .label-body__label {
    color: #506269;
    margin-bottom: 17.53px;
@@ -249,20 +277,17 @@ body {
 .about-block__text {
    font-size: 24px;
    line-height: 167%;
-   font-weight: 300;
+   font-family: 'Circular Air Light';
 }
 .about-block__text p:not(:last-child) {
    margin-bottom: 32px;
 }
 .about-block__text span {
-   font-weight: 700;
+   font-family: 'Circular Air Bold';
 }
 
-.about-block__steps {
-}
 .steps {}
-.steps__list {
-}
+.steps__list {}
 .steps__items {
    display: flex;
    justify-content: space-between;
@@ -274,6 +299,18 @@ body {
    display: flex;
    flex-direction: column;
    color: #FFFFFF;
+   position: relative;
+}
+.items-steps__item:not(:last-child):after {
+   position: absolute;
+   content: '';
+   top: 50.3px;
+   left: 100px;
+   width: 174.23px;
+   height: 1px;
+   background-color: #fff;
+   border: 1px solid #FFFFFF;
+   transform: rotate(90deg);
 }
 .items-steps__number {
    font-family: 'Playfair Display SC';
@@ -346,7 +383,9 @@ body {
 
 
 /*-------------------------------------------------------------------------*/
-.page__clients {}
+.page__clients {
+   padding-top: 132.17px;
+}
 
 .clients-block {}
 
@@ -366,6 +405,7 @@ body {
    justify-content: center;
    flex-wrap: wrap;
    align-items: center;
+   margin: 0 auto;
 }
 
 .clients-block__list li {

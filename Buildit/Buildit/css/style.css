@@ -1,0 +1,719 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   font-family: 'Noto Sans';
+   font-weight: 700;
+   color: #678C92;
+   /* -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%; */
+}
+
+/*==============================================================*/
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+[class*="__container"] {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.page {
+   flex: 1 1 auto;
+}
+
+.button {
+   color: #F4F7FF;
+   box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
+   background: linear-gradient(104.26deg, rgba(67, 151, 164, 0.2) 0.88%, rgba(91, 204, 222, 0.2) 99.89%), #4397A4;
+   border-radius: 5px;
+   line-height: 137.5%;
+   transition: all 0.3s ease 0s;
+}
+.button:hover{
+   background: #33747d;
+}
+.title {
+   font-size: 36px;
+   line-height: 133%;
+   color: #486A6F;
+}
+.text {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 200%;
+}
+.topic {
+   color: #5BCCDE;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 200%;
+}
+
+/*==============================================================*/
+/*=========================HEADER===============================*/
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 15;
+}
+
+.header__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 180px;
+   padding: 0 10px;
+}
+
+.header__logo {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 183%;
+   color: #486A6F;
+}
+/* ЧЕ Я НЕ ТАК ДЕЛАЮ С ЭТИМ ПСЕВДОЭЛЕМЕНТОМ? */
+.header__logo::before {
+   /* position: absolute;
+   content: '';
+   top: 65px;
+   left: 148px; */
+   gap: 10px;
+   width: 50px;
+   height: 50px;
+   background: linear-gradient(104.26deg, rgba(67, 151, 164, 0.2) 0.88%, rgba(91, 204, 222, 0.2) 99.89%), #4397A4;
+   box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
+   border-radius: 100px;
+}
+.header__menu {}
+.menu {}
+.menu__list {
+   display: flex;
+}
+.menu__item:not(:last-child) {
+   margin-right: 50px;
+}
+.menu__link {
+   color: inherit;
+   font-weight: 500;
+   line-height: 200%;
+}
+
+.header__button {
+   /* ЛУЧШЕ ФИКС ЗАДАТЬ РАЗМЕРЫ КНОПКИ ИЛИ ПАДДИНГАМИ? */
+   padding: 10px 25px;
+   /* КАК ОБНУЛИТЬ box-shadow? */
+   box-shadow: 0px;
+}
+
+/*==============================================================*/
+/*==========================MAIN================================*/
+.page__main-block {
+   background-color: #F4F7FF;
+   padding: 65px 0px 25.54px 0px;
+}
+.page__main-block::before {
+   position: absolute;
+   content: '';
+   /* ЗАЧЕМ ЗДЕСЬ СТАВИТЬ 200%?*/
+   /* Появляется гориз.скролл */
+   /* width: 100%; */
+   width: 709px;
+   height: 961.96px;
+   top: 0px;
+   left: 749px;
+   background: linear-gradient(180deg, #9ED5DE 0%, #4397A4 100%);
+   box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
+}
+.main-block {
+   background: linear-gradient(42.43deg, #C6DBFF 0%, #E1EBFA 52.25%);
+}
+.main-block__container {
+   display: flex;
+   position: relative;
+   padding-top: 245px;
+}
+
+.main-block__text-body {}
+
+.text-body {
+   margin-right: 52px;
+}
+
+.text-body__title {
+   font-size: 64px;
+   line-height: 112.5%;
+   color: #486A6F;
+   font-weight: 700;
+   /* ЧТО НИЖЕ БЫЛО В FIGMA. ЭТО НАДО ПРОПИСЫВАТЬ?*/
+   /* -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; */
+}
+.text-body__title:not(:last-child) {
+   margin-bottom: 20px;
+}
+.text-body__subtitle {
+   font-weight: 400;
+   font-size: 22px;
+   line-height: 163%;
+}
+.text-body__subtitle:not(:last-child) {
+   margin-bottom: 100px;
+}
+.text-body__buttons {}
+
+.buttons-block {}
+
+.buttons-block__service-button {
+   padding: 20px 29px 19px 26px;
+}
+.buttons-block__service-button:not(:last-child) {
+   margin-right: 20px;
+}
+
+.buttons-block__about-button {
+   padding: 20px 58px 19px 49px;
+   background: #C6DBFF;
+   border-radius: 5px;
+   color: #486A6F;
+   line-height: 137.5%;
+   transition: all 0.3s ease 0s;
+}
+.buttons-block__about-button:hover {
+   background: #8492aa;
+   color: #F4F7FF;
+}
+.main-block__image-body {
+   width: 630.5px;
+   height: 629.68px;
+}
+
+.image-body {
+}
+
+.image-body__first-row {
+   display: flex;
+   align-items: flex-end;
+   margin-bottom: 38px;
+}
+.image-body__second-row {
+   display: flex;
+   align-items: flex-start;
+}
+.image-body__item:not(:last-child) {
+   margin-right: 33px;
+}
+
+/*==============================================================*/
+.page__features {
+   padding-top: 270.46px;
+   padding-bottom: 173.54px;
+}
+
+.features {}
+
+.features__container {}
+
+.features__title {
+   text-align: center;
+   margin-bottom: 60px;
+}
+
+.features__row {
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.features__item {
+   padding: 50px;
+}
+.features__item:not(:last-child) {
+   margin-right: 20px;
+}
+
+.item-features {
+   height: 308px;
+   width: 366.67px;
+}
+
+.item-features__icon {
+   /* Как отцентрировать среднюю иконку */
+   background: linear-gradient(135deg, rgba(103, 140, 146, 0.2) 0%, rgba(158, 213, 222, 0.2) 100%), #678C92;
+   box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
+   border-radius: 5px;
+   width: 70px;
+   height: 70px;
+   padding: 20px;
+   text-align: center;
+}
+.item-features__icon:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.item-features__label {
+   font-size: 24px;
+   line-height: 183%;
+   color: #486A6F;
+}
+.item-features__label:not(:last-child) {
+   margin-bottom: 10px;
+}
+.item-features__text {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 200%;
+}
+
+/*==============================================================*/
+.page__about {
+   padding-top: 161.87px;
+   padding-bottom: 104.54px;
+   background: #E1EBFA;
+}
+.about {}
+.about__container {}
+
+.about__partners {
+   text-align: center;
+   position: relative;
+   margin-bottom: 80px;
+}
+.about__partners:not(:last-child) img {
+   margin-right: 40px;
+}
+/* КАК РЕАЛИЗ. ЭТИ ЛИНИИ + ПОЧЕМУ У НИХ РАЗНАЯ ТОЛЩИНА? */
+.about__partners::before {
+   position: absolute;
+   content: '';
+   top: -42px;
+   left: 0;
+   width: 1200px;
+   height: 1.16px;
+   background-color: #678C92;
+}
+.about__partners::after {
+   position: absolute;
+   content: '';
+   top: 85px;
+   left: 0;
+   width: 1200px;
+   height: 1.16px;
+   background-color: #678C92;
+}
+
+.about__column {}
+
+.column {
+   display: flex;
+   align-items: center;
+   padding: 0px 60px;
+}
+
+.column__image {
+   margin-right: 40px;
+}
+
+.column__body--about {
+   padding: 20px 40px 20px 20px;
+   width: 540px;
+}
+
+.column__topic {}
+.column__topic:not(:last-child) {
+   margin-bottom: 20px;
+}
+.column__title {
+
+}
+.column__title:not(:last-child) {
+   margin-bottom: 20px;
+}
+.column__text {}
+.column__text:not(:last-child) {
+   margin-bottom: 55px;
+}
+.column__button {
+   padding: 15px 71.5px;
+}
+
+/*==============================================================*/
+.page__projects {
+   padding-top: 226.46px;
+   padding-bottom: 83.54px;
+   background-color: #F4F7FF;
+}
+
+.projects {}
+.projects__container {}
+.projects__column {
+}
+
+.column {
+   display: flex;
+}
+.column__body--projects {
+   width: 500px;
+   padding: 20px;
+   margin-right: 57px;
+}
+
+.column__topic {}
+.column__title {}
+.column__text {}
+
+.column__image {
+   display: flex;
+   flex-wrap: wrap;
+}
+.column__image:nth-child(2) img{
+   align-self: flex-start;
+   background-color: linear-gradient(104.26deg, rgba(67, 151, 164, 0.2) 0.88%, rgba(91, 204, 222, 0.2) 99.89%), #4397A4;
+   box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
+}
+.column__image img {
+   /* margin-right: 30.5px; */
+   margin-bottom: 30px;
+}
+
+/*==============================================================*/
+.page__socials {
+   padding-top: 192.46px;
+   background-color: #E1EBFA;
+}
+
+.socials {}
+
+.socials__container {
+   text-align: center;
+}
+
+.socials__topic:not(:last-child) {
+   margin-bottom: 10px;
+}
+.socials__title:not(:last-child) {
+   margin-bottom: 40px;
+}
+
+.socials__row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+.socials__image:not(:last-child) img{
+   margin: 0px 20px 20px 0px;
+}
+.socials__image:nth-child(2) img {
+   margin: 0px 20px 20px 0px;
+}
+.socials__image:nth-child(3) img{
+   margin: 0px 0px 20px 0px;
+}
+.socials__image:nth-child(4) img {
+   margin: -10px 20px 0px 0px;
+}
+.socials__image:nth-child(5) img {
+   margin: -10px 20px 0px 0px;
+}
+.socials__image:nth-child(6) img{
+   margin: -10px 0px 0px 0px;
+}
+
+/*==============================================================*/
+.page__contact {
+   padding-top: 276px;
+   padding-bottom: 117.54px;
+   background: #F4F7FF;
+}
+
+.contact {}
+
+.contact__container {
+   display: flex;
+   justify-content: space-between;
+}
+
+.contact__topic {
+   margin-bottom: 13px;
+}
+
+.contact__title {
+   margin-bottom: 110px;
+}
+
+.contact__address {}
+
+.address {}
+
+.address__item {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+.address__item:not(:last-child) {
+   margin-bottom: 30px;
+}
+
+.address__icon {
+   /* Не совсем по центру иконка. Как лучше решить? */
+   text-align: center;
+   width: 70px;
+   height: 70px;
+   padding: 20px;
+   background: #E1EBFA;
+   border-radius: 5px;
+   margin-right: 37.8px;
+}
+
+.address__caption {
+   font-weight: 500;
+   color: #486A6F;
+   margin-bottom: 10px;
+}
+.address__info {
+   color: #486A6F;
+}
+.address__column {
+   display: flex;
+   flex-direction: column;
+}
+
+.contact__form {
+   width: 475.97px;
+   height: 508px; 
+   filter: drop-shadow(0px 30px 60px rgba(59, 130, 246, 0.25));
+}
+
+.form-contact {
+   padding: 52px 42px 35px 42px;
+   background: linear-gradient(42.43deg, #C6DBFF 0%, #E1EBFA 52.25%);
+   border-radius: 5px;
+}
+
+.form-contact__input-wrapper {
+   display: flex;
+}
+.form-contact__input-inner {
+   margin-bottom: 0px;
+   display: flex;
+   flex-direction: column;
+}
+.form-contact__label {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 135%;
+}
+.form-contact__input {
+   color: #486A6F;
+   padding: 10px;
+   font-weight: 700;
+   background-color: transparent;
+   width: 185.42px;
+   height: 40px;
+   border: 1px solid #486A6F;
+   border-radius: 3px;
+   margin-bottom: 28px;
+   /* transition: all 0.1s ease 0s; */
+}
+.form-contact__input:focus{
+   background-color: #F4F7FF;
+   border: 2px solid #486A6F;
+}
+.form-contact__input-inner:not(:last-child) {
+   margin-right: 20.22px;
+}
+
+.form-contact__input--wide {
+   width: 391.51px;
+   /* КАК СДЕЛАТЬ ОДИНАКОВЫЕ ОТСТУПЫ МЕЖДУ ВСЕМИ ЭЛ-ТАМИ */
+   margin-bottom: 28px;
+}
+
+.form-contact__textarea {
+   /* КАК ПОСТАВИТЬ КУРСОР В ЛЕВЫЙ УГОЛ? */
+   font-weight: 700;
+   color: #486A6F;
+   padding: 5px;
+   background-color: transparent;
+   width: 393.95px;
+   height: 130px;
+   border: 1px solid #486A6F;
+   border-radius: 3px;
+   margin-bottom: 28px;
+}
+.form-contact__textarea:focus {
+   background-color: #F4F7FF;
+   border: 2px solid #486A6F;
+}
+
+.form-contact__button {
+   font-weight: 700;
+   padding: 15px 143.05px;
+}
+
+/*==============================================================*/
+/*=========================FOOTER===============================*/
+.footer {
+   padding-top: 83.46px;
+   padding-bottom: 57.54px;
+   background: linear-gradient(84.81deg, rgba(72, 106, 111, 0.2) 0%, rgba(67, 151, 164, 0.2) 100%), #486A6F;
+   color: #F4F7FF;
+}
+
+.footer__container {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__column {}
+
+.column-footer {}
+
+.column-footer__logo {
+   font-size: 24px;
+   line-height: 183%;
+   font-weight: 700;
+}
+
+.column-footer__label {
+   font-weight: 500;
+   line-height: 200%;
+   margin-bottom: 109px;
+}
+
+.column-footer__caption {
+   font-weight: 500;
+   line-height: 200%;
+}
+span {
+   /* КАК СДЕЛАТЬ ЭТО ПОДЧЕРКИВАНИЕ */
+   text-decoration: underline;
+}
+
+.column-footer__list {
+   margin-bottom: 32px;
+}
+
+.column-footer__item {
+   margin-bottom: 6px;
+}
+
+.column-footer__link {
+   color: #F4F7FF;
+   font-weight: 500;
+   line-height: 200%;
+}
+
+.column-footer__icons {
+   display: flex;
+}
+
+.column-footer__icon {
+   /* ТАК НАДО ВЫРАВНИВАТЬ ИКОНКИ? */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   /* ============================ */
+   width: 40px;
+   height: 40px;
+   padding: 10px;
+   background: #678C92;
+   border-radius: 6px;
+}
+.column-footer__icon:not(:last-child) {
+   margin-right: 20px;
+}
+
+.column-footer__desc {
+   margin-bottom: 6px;
+}
+
+.column-address {
+   margin-bottom: 50px;
+}
